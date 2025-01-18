@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('movies', function (Blueprint $table) {
+        Schema::create('films', function (Blueprint $table) {
             $table->id();
-            $table->string('title', length: 45,);
-            $table->text('summary');
-            $table->integer('tahun');
-            $table->string('poster', length: 225);
-            $table->foreignid('genres_id')-> references(column:'id')-> on(table:'genres');
+            $table->string('Judul', length:45);
+            $table->text('Ringkasan');
+            $table->integer('Tahun');
+            $table->string('Poster', length:45);
+            $table->foreignid('genre_id')->constrained();
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('movies');
+        Schema::dropIfExists('films');
     }
 };

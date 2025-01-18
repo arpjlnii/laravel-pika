@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('perans', function (Blueprint $table) {
+        Schema::create('genres', function (Blueprint $table) {
             $table->id();
-            $table->foreignid('movies_id')-> references(column: 'id')-> on(table: 'movies');
-            $table->foreignid('genres_id')-> references(column:'id')-> on(table: 'genres');
-            $table->string('nama :', length:45);
-            $table->timestamp();
+            $table->string('Nama', length:45);
+            $table->timestamps();
         });
     }
 
@@ -25,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('perans');
+        Schema::dropIfExists('genres');
     }
 };
