@@ -29,8 +29,8 @@
             <form>
               <div class="card-body">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Jenis Genre</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukan Genre ">
+                  <label for="MovieGenre">Jenis Genre</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukan Genre " name="nama">
                 </div>
                     
               <!-- /.card-body -->
